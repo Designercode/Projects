@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+ <html ng-app="TaskList">
+
+  <head>
+     <title>Bloc-it-off</title>
+     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.1/build/cssreset/cssreset-min.css">
+     <link rel="stylesheet" type="text/css" href="app/stylesheets/app.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script src="/javascripts/vendor.js"></script>
+     <script src="/javascripts/app.js"></script>
+     <script>
+       require('scripts/app');
+     </script>
+  </head>
+  <body>      
+    <nav class="menu">
+       <div class="container">
+         <div class='header'> 
+           <a ui-sref='home' class='menuLeft'>
+             <img src="app/assets/images/logo.png" alt= "Bloc-it-off Logo"/>
+           </a>
+         </div>
+         <ul class="menuRight">
+          <li><a ui-sref='taskHistory'>history</a></li>
+          <li><a ui-sref='activeTasks'>active</a></li>
+          <li><a ui-sref='login'>login</a></li>
+         </ul>
+       </div>
+    </nav>
+  <!-- Render templates here -->
+     <div ui-view></div>
+     <div class ='footer'>
+     </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+@import "activeTasks";
+@import "taskHistory";
+
+html, body
+{
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav 
+{
+  background-color: #34BEB7;
+  height: 90px;
+}
+
+.menuLeft
+{
+  float: left;
+  max-width: 50%;
+}
+
+.menuRight
+{
+  float: right;
+  max-width: 50%;
+  margin-left: 200px;
+}
+
+.menuLeft img
+{
+  margin: 0px;
+  padding-top: 10px;
+  padding-left: 11px;
+}
+
+ ul.menuRight
+{
+  margin-top: 35px;
+  margin-right: 90px;
+}
+
+.menuRight li
+{
+  display:inline;
+  font-family: helvetica;
+  font-style: bold;
+  font-size: 20px;
+  color: white;
+  padding-right: 100px;
+  list-style-type: none;
+}
