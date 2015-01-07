@@ -56,5 +56,12 @@
 
  BlocItOff.controller('activeTasks.controller', ['$scope', function($scope) 
   {
-    $scope.subText = "Testing,1,2,3";
+    $scope.tasks = [];
+      for (var i = 0; i <6; i++)
+      {
+      $scope.tasks.push(angular.copy(TaskList)); 
+      }   
   }]);
+
+
+

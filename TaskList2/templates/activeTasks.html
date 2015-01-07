@@ -1,5 +1,30 @@
-<div class="taskList">
-  <div class="task">
-    <p>{{subtext}}</p>
+<div class="listBackground">
+  <div class="taskContainer">
+    <div class="taskList">
+       <h3>Current Tasks</h3>
+    </div>
+      <div class="addTask">
+          <ul>
+              <li>Task Description</li>
+              <li>Priority</li>   
+          </ul>
+        <div class="input">
+          <div class="enterTask"></div>
+          <div class="enterPriority"></div> 
+          <div class="submitButton">
+            <p>Add</p>
+          </div> 
+        </div> 
+      </div>
+    <div class= "taskRow">
+        <div ng-repeat= "task in tasks">
+          <div class= "taskName">{{ task.task }}</div>
+          <div class="taskStatus">
+            <span ng-switch="getTaskStatus(status)">
+            </span>
+          </div>  
+          <div class="priority">{{ task.importance }}</div>  
+        </div>
+    </div> 
   </div>
 </div>

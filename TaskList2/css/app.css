@@ -1,7 +1,113 @@
+.listBackground {
+  width: 100%;
+  height: 100%;
+  background-color: white; }
+
+.taskContainer {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  width: 50%;
+  height: 75%;
+  background-color: #d3d1d2;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  /* future proofing */
+  -khtml-border-radius: 20px;
+  /* for old Konqueror browsers */ }
+
 .taskList {
-  width: 50px;
+  width: 100%;
+  overflow: hidden;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomright: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: #4a4a4a;
+  font-family: helvetica;
+  font-size: 14px;
+  background-color: #a19e9f;
+  height: 10%; }
+  .taskList h3 {
+    margin-top: 20px;
+    height: 10px;
+    text-align: center; }
+
+.addTask {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  background-color: #c5c5c5; }
+  .addTask ul {
+    height: 50px;
+    overflow: hidden;
+    margin: 0px; }
+    .addTask ul li {
+      margin-top: 10px;
+      color: #6d6d6d;
+      height: 100%;
+      font-family: helvetica;
+      display: inline;
+      text-decoration: none;
+      padding-left: 30px;
+      padding-right: 100px; }
+
+.input {
+  width: 100%;
   height: 50px;
-  background-color: black; }
+  background-color: green; }
+  .input .enterTask {
+    position: inline;
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: #eaeaea; }
+  .input .enterPriority {
+    position: inline;
+    float: left;
+    width: 30%;
+    height: 100%;
+    background-color: #fff; }
+  .input .submitButton {
+    position: inline;
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: #616161; }
+    .input .submitButton p {
+      font-family: helvetica;
+      color: white;
+      text-align: center; }
+
+.taskRow {
+  clear: both;
+  position: block;
+  width: 100%;
+  height: 250px;
+  background-color: #fff; }
+  .taskRow .ng-scope {
+    margin: 0px;
+    padding: 0px;
+    height: 30px; }
+    .taskRow .ng-scope .taskName {
+      float: left;
+      width: 30%;
+      height: 30px; }
+    .taskRow .ng-scope .taskStatus {
+      float: left;
+      width: 30%;
+      height: 30px; }
+    .taskRow .ng-scope .priority {
+      float: left;
+      width: 30%;
+      height: 30px; }
 
 html, body {
   height: 100%;
@@ -52,7 +158,6 @@ ul.menuRight {
 
 .ng-scope {
   clear: both;
-  margin-top: 90px;
+  margin-top: 45px;
   width: 100%;
-  height: 75%;
-  margin-bottom: 40px; }
+  height: 100%; }
