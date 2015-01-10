@@ -1,0 +1,44 @@
+<div class="listBackground">
+  <div class="taskContainer">
+    <div class="taskList">
+       <h3>Current Tasks</h3>
+    </div>
+      <div class="addTask">
+          <ul>
+              <li class="des">Task Description</li>
+              <li class = "pri">Priority</li>   
+          </ul>
+        <div class="input">
+          <div class="enterTask">
+            <form name="enterNew">
+              <input type="text" name="newTask" ng-model="task.task">
+            </form>
+          </div>
+          <div class="enterPriority">
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+          </div> 
+          <div class="submitButton">
+           <button class="submission" type="submit" title="Add"></button>
+          </div> 
+        </div> 
+      </div>
+    <div class= "taskRow">
+        <div ng-repeat= "task in tasks">
+          <div class= "taskName">{{ task.task }}</div>
+          <div class="taskStatus">
+            <span ng-switch="getTaskStatus(status)">
+            </span>
+          </div>  
+          <div class="priority">{{ task.importance }}</div>  
+           <label>
+              <input class="taskCheck" type="checkbox" checklist-model="task.status" checklist-value="tasks.task">
+           </label>
+        </div>
+    </div> 
+  </div>
+    <div class="bottom"></div>
+</div>

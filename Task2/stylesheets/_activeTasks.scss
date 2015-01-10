@@ -1,0 +1,230 @@
+.listBackground
+{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.taskContainer
+{
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  width: 700px;
+  background-color: #d3d1d2;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; /* future proofing */
+  -khtml-border-radius: 20px; /* for old Konqueror browsers */
+}
+
+.taskList
+{
+  width: 700px;
+  overflow: hidden;
+ -moz-border-radius-topleft: 20px;
+ -moz-border-radius-topright: 20px;
+ -moz-border-radius-bottomright: 0px;
+ -moz-border-radius-bottomleft: 0px;
+
+ -webkit-border-top-left-radius: 20px;
+ -webkit-border-top-right-radius: 20px;
+ -webkit-border-bottom-right-radius: 0px;
+ -webkit-border-bottom-left-radius: 0px;
+
+ border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
+
+  color: #4a4a4a;
+  font-family: helvetica;
+  font-size: 14px;
+  background-color: #a19e9f;
+  height: 60px;
+
+   h3
+  {
+    margin-top: 20px;
+    height: 10px;
+    text-align: center;
+  } 
+
+}
+
+  .addTask
+  {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: #c5c5c5;
+
+    ul
+    {
+      height: 50px;
+      overflow: hidden;
+      margin: 0px;
+      padding: 0px;
+
+      li
+      {
+        margin-top: 16px;
+        float: left;
+        color: #6d6d6d;
+        height: 100%;
+        font-family: helvetica;
+        display: block;
+        text-decoration: none;
+        }
+
+        .des
+        {
+          margin-left: 120px;
+        }
+        .pri 
+        {
+          margin-left: 230px;
+        }
+
+      }
+    }
+
+  .input
+  {
+    width: 700px;
+    height: 50px;
+    background-color: green;
+
+    .enterTask
+    {
+      position: relative;
+      z-index: 100;
+      float: left;
+      width: 400px;
+      height: 50%;
+      background-color: #eaeaea;
+
+   .ng-valid
+      {
+        height: 48px;
+        width: 398px;
+        border: none;
+        background-color: #eaeaea;
+
+        .ng-dirty
+        {
+          width: 369px;
+          padding-left: 30px;
+          font-family: helvetica;
+          font-size: 20px;
+        }
+
+
+      }
+    }
+    .enterPriority
+    {
+      padding-left: 32px;
+      width: 168px;
+      float: left;
+      height: 100%;
+      background-color: #fff;
+
+        i
+        {
+          position: block;
+          margin-left: 7px;
+          margin-top: 20px;
+        }
+    }
+    .submitButton
+    {
+      float: left;
+      width: 100px;
+      height: 100%;
+      background-color: #616161;
+
+      input.submission
+      {
+        height: 50px;
+        width: 100px;
+      }
+
+    }
+  }
+
+  .taskRow
+  {
+    clear: both;
+    position: block;
+    width: 699.5px;
+    background-color: #fff;
+
+    .ng-scope
+    {
+      width:99.8%;
+      margin: 0px;
+      padding: 0px;
+      height: 40px;
+      border: 1px solid gray;
+
+      .taskName
+      {
+        font-family: helvetica;
+        padding-left: 10px;
+        margin-top: 10px;
+        float: left;
+        width: 30%;
+        height: 30px;
+      }
+      .taskStatus
+      {
+        font-family: helvetica;
+        margin-top: 10px;
+        float: left;
+        width: 30%;
+        height: 30px;
+      }
+      .priority
+      {
+        font-family: helvetica;
+        padding-left: 20px;
+        margin-top: 10px;
+        float: left;
+        width: 30%;
+        height: 30px;
+      }
+    }
+
+    .taskCheck
+    {
+      margin-top: 14px;
+    }
+}
+
+.bottom
+{
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 700px;
+  background-color: #a19e9f;
+  overflow: hidden;
+ -moz-border-radius-bottomleft: 20px;
+ -moz-border-radius-bottomright: 20px;
+ -moz-border-radius-topright: 0px;
+ -moz-border-radius-topleft: 0px;
+
+ -webkit-border-bottom-left-radius: 20px;
+ -webkit-border-bottom-right-radius: 20px;
+ -webkit-border-top-right-radius: 0px;
+ -webkit-border-top-left-radius: 0px;
+
+ border-bottom-left-radius: 20px;
+ border-bottom-right-radius: 20px;
+}
+
+
+
+
+       
+
+
