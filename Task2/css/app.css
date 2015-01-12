@@ -93,14 +93,6 @@
       position: block;
       margin-left: 7px;
       margin-top: 20px; }
-  .input .submitButton {
-    float: left;
-    width: 100px;
-    height: 100%;
-    background-color: #616161; }
-    .input .submitButton input.submission {
-      height: 50px;
-      width: 100px; }
 
 .taskRow {
   clear: both;
