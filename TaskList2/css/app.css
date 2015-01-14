@@ -7,8 +7,7 @@
   margin-right: auto;
   margin-left: auto;
   margin-top: 100px;
-  width: 50%;
-  height: 75%;
+  width: 700px;
   background-color: #d3d1d2;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -18,7 +17,7 @@
   /* for old Konqueror browsers */ }
 
 .taskList {
-  width: 100%;
+  width: 700px;
   overflow: hidden;
   -moz-border-radius-topleft: 20px;
   -moz-border-radius-topright: 20px;
@@ -34,7 +33,7 @@
   font-family: helvetica;
   font-size: 14px;
   background-color: #a19e9f;
-  height: 10%; }
+  height: 60px; }
   .taskList h3 {
     margin-top: 20px;
     height: 10px;
@@ -48,66 +47,104 @@
   .addTask ul {
     height: 50px;
     overflow: hidden;
-    margin: 0px; }
+    margin: 0px;
+    padding: 0px; }
     .addTask ul li {
-      margin-top: 10px;
+      margin-top: 16px;
+      float: left;
       color: #6d6d6d;
       height: 100%;
       font-family: helvetica;
-      display: inline;
-      text-decoration: none;
-      padding-left: 30px;
-      padding-right: 100px; }
+      display: block;
+      text-decoration: none; }
+    .addTask ul .des {
+      margin-left: 120px; }
+    .addTask ul .pri {
+      margin-left: 230px; }
 
 .input {
-  width: 100%;
+  width: 700px;
   height: 50px;
   background-color: green; }
   .input .enterTask {
-    position: inline;
+    position: relative;
+    z-index: 100;
     float: left;
-    width: 50%;
-    height: 100%;
+    width: 400px;
+    height: 50%;
     background-color: #eaeaea; }
+    .input .enterTask .ng-valid {
+      height: 48px;
+      width: 398px;
+      border: none;
+      background-color: #eaeaea; }
+      .input .enterTask .ng-valid .ng-dirty {
+        width: 369px;
+        padding-left: 30px;
+        font-family: helvetica;
+        font-size: 20px; }
   .input .enterPriority {
-    position: inline;
+    padding-left: 32px;
+    width: 168px;
     float: left;
-    width: 30%;
     height: 100%;
     background-color: #fff; }
-  .input .submitButton {
-    position: inline;
-    float: left;
-    width: 20%;
-    height: 100%;
-    background-color: #616161; }
-    .input .submitButton p {
-      font-family: helvetica;
-      color: white;
-      text-align: center; }
+    .input .enterPriority i {
+      position: block;
+      margin-left: 7px;
+      margin-top: 20px; }
 
 .taskRow {
   clear: both;
   position: block;
-  width: 100%;
-  height: 250px;
+  width: 699.5px;
   background-color: #fff; }
   .taskRow .ng-scope {
+    width: 99.8%;
     margin: 0px;
     padding: 0px;
-    height: 30px; }
+    height: 40px;
+    border: 1px solid gray; }
     .taskRow .ng-scope .taskName {
+      font-family: helvetica;
+      padding-left: 10px;
+      margin-top: 10px;
       float: left;
       width: 30%;
       height: 30px; }
     .taskRow .ng-scope .taskStatus {
+      font-family: helvetica;
+      margin-top: 10px;
       float: left;
       width: 30%;
       height: 30px; }
     .taskRow .ng-scope .priority {
+      font-family: helvetica;
+      padding-left: 20px;
+      margin-top: 10px;
       float: left;
       width: 30%;
       height: 30px; }
+  .taskRow .taskCheck {
+    margin-top: 14px; }
+
+.bottom {
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 700px;
+  background-color: #a19e9f;
+  overflow: hidden;
+  -moz-border-radius-bottomleft: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-topleft: 0px;
+  -webkit-border-bottom-left-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-top-left-radius: 0px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; }
 
 html, body {
   height: 100%;
