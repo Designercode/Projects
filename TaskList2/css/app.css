@@ -65,34 +65,45 @@
 .input {
   width: 700px;
   height: 50px;
-  background-color: green; }
+  background-color: gray; }
   .input .enterTask {
     position: relative;
     z-index: 100;
     float: left;
     width: 400px;
-    height: 50%;
+    height: 50px;
     background-color: #eaeaea; }
     .input .enterTask .ng-valid {
-      height: 48px;
-      width: 398px;
+      padding-left: 10px;
+      height: 47px;
+      width: 388px;
       border: none;
-      background-color: #eaeaea; }
-      .input .enterTask .ng-valid .ng-dirty {
-        width: 369px;
-        padding-left: 30px;
-        font-family: helvetica;
-        font-size: 20px; }
+      background-color: #eaeaea;
+      font-size: 20px; }
   .input .enterPriority {
     padding-left: 32px;
     width: 168px;
     float: left;
-    height: 100%;
+    height: 50px;
     background-color: #fff; }
     .input .enterPriority i {
       position: block;
       margin-left: 7px;
       margin-top: 20px; }
+  .input .submitButton {
+    float: left;
+    width: 100px;
+    height: 100%;
+    background-color: #616161; }
+    .input .submitButton input {
+      padding-top: 6px;
+      height: 50px;
+      width: 100px;
+      border: none;
+      color: white;
+      font-family: helvetica;
+      font-size: 16px;
+      background-color: #616161; }
 
 .taskRow {
   clear: both;
@@ -112,6 +123,11 @@
       float: left;
       width: 30%;
       height: 30px; }
+      .taskRow .ng-scope .taskName .completed {
+        margin: 0px;
+        padding: 0px;
+        text-decoration: line-through;
+        color: grey; }
     .taskRow .ng-scope .taskStatus {
       font-family: helvetica;
       margin-top: 10px;
