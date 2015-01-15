@@ -17,7 +17,7 @@ nav
   width: 100%;
 }
 
-.menuLeft
+.menuLeft //Don't camel case styles. Do it like this menu-left
 {
   float: left;
   max-width: 50%;
@@ -37,7 +37,7 @@ nav
   padding-left: 11px;
 }
 
- ul.menuRight
+ ul.menuRight // Don't add the html element if you're using a class unless it helps to document what you're doing. In this case I don't think oyu need it
 {
   margin-top: 35px;
   margin-right: 90px;

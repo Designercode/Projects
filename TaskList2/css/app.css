@@ -80,13 +80,13 @@
       border: none;
       background-color: #eaeaea;
       font-size: 20px; }
-  .input .enterPriority {
+  .input .enterPriority, .input .priority {
     padding-left: 32px;
     width: 168px;
     float: left;
     height: 50px;
     background-color: #fff; }
-    .input .enterPriority i {
+    .input .enterPriority i, .input .priority i {
       position: block;
       margin-left: 7px;
       margin-top: 20px; }

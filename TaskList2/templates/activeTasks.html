@@ -15,11 +15,11 @@
                     <input type="text" name="newTask" ng-model="enterTaskName">
                 </div> 
               <div class="enterPriority">
-                    <i id="star1" class="fa" ng-click="fillStar($event)" ng-class="starClass()"></i>
-                    <i id="star2" class="fa" ng-click="fillStar($event)" ng-class="starClass()"></i>
-                    <i id="star3" class="fa" ng-click="fillStar($event)" ng-class="starClass()"></i>
-                    <i id="star4" class="fa" ng-click="fillStar($event)" ng-class="starClass()"></i>
-                    <i id="star5" class="fa" ng-click="fillStar($event)" ng-class="starClass()"></i>
+                    <i class="fa" ng-click="fillStar($event)" ng-class="starClass()"></i>
+                    <i class="fa" ng-click="fillStar($event)" ng-class="starClass()"></i>
+                    <i class="fa" ng-click="fillStar($event)" ng-class="starClass()"></i>
+                    <i class="fa" ng-click="fillStar($event)" ng-class="starClass()"></i>
+                    <i class="fa" ng-click="fillStar($event)" ng-class="starClass()"></i>
               </div> 
               <div class="submitButton">
                   <input type="submit" value="Add">
@@ -36,11 +36,7 @@
             <span ng model="task.status" ></span>
           </div>  
           <div class="priority">
-             <i id="imp1" class="fa" ng-class="populateTaskStars()"></i>
-             <i id="imp2" class="fa" ng-class="populateTaskStars()"></i>
-             <i id="imp3" class="fa" ng-class="populateTaskStars()"></i>
-             <i id="imp4" class="fa" ng-class="populateTaskStars()"></i>
-             <i id="imp5" class="fa" ng-class="populateTaskStars()"></i>
+             <stars rating-value="{{task.importance}}" max="5">
           </div>  
            <label>
               <input id="check" class="taskCheck" type="checkbox" ng-click="getTaskStatus($event)" ng-model:"task.status">

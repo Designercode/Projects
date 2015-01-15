@@ -1,40 +1,9 @@
-//console.log('app.js');
+BlocItOff = angular.module('BlocItOff', [
+  'ui.router',
+  'BlocItOff.services',
+  'BlocItOff.directives'
+]);
 
-// Example Task List
- var TaskList = 
- {
-   taskListName: 'Things To Do',
-   createdBy: 'April Klein',
-
-   tasks: 
-   [
-      { taskName: 'laundry', 
-        dateCreated: '12.16.2014', 
-        importance: 3,
-        status: 'active'
-      },
-
-      { taskName: 'wash dishes', 
-        dateCreated: '12.05.2014', 
-        importance: 2,
-        status: 'expired'
-      },
-      
-      { taskName: 'grocery shopping', 
-        dateCreated: '12.15.2014', 
-        importance: 4,
-        status: 'completed'
-      },
-      
-      { taskName: 'send postcard', 
-        dateCreated: '12.10.2014', 
-        importance: 3,
-        status: 'active'
-      },    
-   ]
- };
-
- BlocItOff = angular.module('BlocItOff', ['ui.router']);
  BlocItOff.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) 
    {
       $locationProvider.html5Mode(true);
@@ -56,20 +25,16 @@
 
 // Populates Task List with Given Object Array
 
- BlocItOff.controller('activeTasks.controller', ['$scope', function($scope) 
+ BlocItOff.controller('activeTasks.controller', function($scope, Tasks) 
   {
-    $scope.tasks = [];
-      for (var i = 0; i<TaskList.tasks.length; i++)
-      {
-        $scope.tasks.push(angular.copy(TaskList.tasks[i])); 
-      }
+    $scope.tasks = Tasks.getTasks();
 
 
     // Controlling Priority Icons by Toggle on Click: Step 1 retrieve element id.
     var currentStar = null;
     var Imp = null;
     var newStatus = null;
-
+    
     $scope.fillStar = function(event)
     {
       currentStar = event.target.id;
@@ -79,50 +44,54 @@
    // using the id of the star to determine which icon state is activated
    $scope.starClass = function()
     {
-      
-     if(currentStar === "star1")
-        {
-          document.getElementById("star1").className = "fa fa-star";
-          document.getElementById("star2").className = "fa fa-star-o";
-          document.getElementById("star3").className = "fa fa-star-o";
-          document.getElementById("star4").className = "fa fa-star-o";
-          document.getElementById("star5").className = "fa fa-star-o";
-        }
+     var star1 = document.getElementById("star1");
+     var star2 = document.getElementById("star2");
+     var star3 = document.getElementById("star3");
+     var star4 = document.getElementById("star4");
+     var star5 = document.getElementById("star5");
+
+      if(currentStar === "star1") {
+        star1.className = "fa fa-star";
+        star2.className = "fa fa-star-o";
+        star3.className = "fa fa-star-o";
+        star4.className = "fa fa-star-o";
+        star5.className = "fa fa-star-o";
+      }
 
      else if(currentStar === "star2")
         {
-          document.getElementById("star1").className = "fa fa-star";
-          document.getElementById("star2").className = "fa fa-star";
-          document.getElementById("star3").className = "fa fa-star-o";
-          document.getElementById("star4").className = "fa fa-star-o";
-          document.getElementById("star5").className = "fa fa-star-o";
+          star1.className = "fa fa-star";
+          star2.className = "fa fa-star";
+          star3.className = "fa fa-star-o";
+          star4.className = "fa fa-star-o";
+          star5.className = "fa fa-star-o";
         }
 
      else if(currentStar === "star3")
         {
-          document.getElementById("star1").className = "fa fa-star";
-          document.getElementById("star2").className = "fa fa-star";
-          document.getElementById("star3").className = "fa fa-star";
-          document.getElementById("star4").className = "fa fa-star-o";
-          document.getElementById("star5").className = "fa fa-star-o";
+          star1.className = "fa fa-star";
+          star2.className = "fa fa-star";
+          star3.className = "fa fa-star";
+          star4.className = "fa fa-star-o";
+          star5.className = "fa fa-star-o";
         }
 
      else if(currentStar === "star4")
         {
-          document.getElementById("star1").className = "fa fa-star";
-          document.getElementById("star2").className = "fa fa-star";
-          document.getElementById("star3").className = "fa fa-star";
-          document.getElementById("star4").className = "fa fa-star";
-          document.getElementById("star5").className = "fa fa-star-o";
+          star1.className = "fa fa-star";
+          star2.className = "fa fa-star";
+          star3.className = "fa fa-star";
+          star4.className = "fa fa-star";
+          star5.className = "fa fa-star-o";
         }
 
     else if(currentStar === "star5")
         {
-          document.getElementById("star1").className = "fa fa-star";
-          document.getElementById("star2").className = "fa fa-star";
-          document.getElementById("star3").className = "fa fa-star";
-          document.getElementById("star4").className = "fa fa-star";
-          document.getElementById("star5").className = "fa fa-star";
+          star1.className = "fa fa-star";
+          star2.className = "fa fa-star";
+          star3.className = "fa fa-star";
+          star4.className = "fa fa-star";
+          star5.className = "fa fa-star";
         }
 
     else
@@ -157,9 +126,14 @@
 
 
     // Adds New Task to TaskList on Form Submit
-    $scope.addTask = function()
-    {
-    $scope.tasks.push({taskName:$scope.enterTaskName, importance: Imp, status: "active"});
+    $scope.addTask = function() {
+      var task = {
+        taskName: $scope.enterTaskName, 
+        importance: Imp, 
+        status: "active"
+      }
+
+      Tasks.addTask(task);
     }
 
 
@@ -213,7 +187,7 @@
 
 */
 
-  }]);
+  });
 
 
    
